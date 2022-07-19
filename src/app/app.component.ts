@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  textSlide = ['Have a great ', 'Be awesome this ', 'Stay happy this ', 'Have a wonderful ', 'Keep smiling this '];
+  textSlide = ['a great ', 'a beautiful ', 'a tiptop ', 'an excellent ', 'a remarkable ', 'an awesome', 'an exquisit', 'an unforgetable'];
 
   currentText = 0;
 
