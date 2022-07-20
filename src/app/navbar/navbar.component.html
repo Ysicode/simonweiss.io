@@ -1,9 +1,9 @@
 <header>
-    <img class="logo" src="assets/img/logo.png" alt="">
+    <img routerLink="/" class="logo" src="assets/img/logo.png" alt="">
     <div class="navbar_right_container d_flex">
-        <div id="navbar_links" class="links_container d_flex">
-            <a href="#">HOME</a>
-            <a href="#">ABOUT</a>
+        <div *ngIf="openNavbar" class="navlinks d_flex">
+            <a routerLink="/">HOME</a>
+            <a routerLink="/about">ABOUT</a>
             <a href="#">CODE</a>
             <a href="#">CHAT</a>
         </div>
