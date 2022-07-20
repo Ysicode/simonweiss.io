@@ -1,0 +1,69 @@
+.main_container {
+    width: 100vw;
+    max-width: 100%;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.profile_img {
+    animation: zoomIn 4s ease;
+    border-radius: 200px;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    margin-top: 200px;
+    margin-bottom: 150px;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.text_container {
+    width: 95%;
+    max-width: 1900px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: calc(25px + 20 * ((100vw - 420px) / 1180));
+}
+
+.start_text {
+    font-family: "Archivo Narrow", sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #c5c5c5;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.colored_text {
+    color: #be8e68;
+}
+
+.link_text {
+    color: #ffc22e;
+}
+
+.focused_text {
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+}
+
+.focused_text:hover {
+    color: #ffc22e;
+}
+
+.textblock_container {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}

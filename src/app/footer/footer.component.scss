@@ -1,0 +1,14 @@
+.text_end_container {
+    margin-left: 2.5%;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    a {
+        text-decoration: underline;
+       color: #c5c5c5; 
+        margin-right: 20px;
+        font-size: calc(25px + 20 * ((100vw - 420px) / 1180));
+    }
+    a:hover {
+        text-decoration-color: #ffc22e;
+    }
+}
