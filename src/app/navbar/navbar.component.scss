@@ -7,8 +7,7 @@ header {
     right: 0;
     top: 0;
     bottom: 0;
-    height: 80px;
-    background: rgba(186, 189, 189, 0.63);
+    height: 100px;
 
     .logo {
         margin-left: 2.5%;
@@ -33,6 +32,11 @@ header {
         font-weight: bold;
     }
 
+    a:hover {
+        text-decoration: underline;
+        text-decoration-color: #ffc22e;
+    }
+
     .burger {
         width: 80px;
         height: 80px;
@@ -40,6 +44,7 @@ header {
         justify-content: center;
         display: flex;
         flex-direction: column;
+        cursor: pointer;
     }
 
     .line1 {
@@ -50,6 +55,26 @@ header {
         transition: transform 225ms ease-in-out;
     }
 
+    @keyframes burgerHover {
+        from {
+            margin-top: 0;
+        }
+        to {
+            margin-top: 6px;
+        }
+    }
+
+    .burger:hover {
+        .line2 {
+            animation: burgerHover 225ms ease-in-out;
+            background: #ffc22e;
+        }
+
+        .line1 {
+            background: #ffc22e;
+        }
+    }
+
     .line2 {
         display: block;
         width: 35px;
@@ -58,7 +83,4 @@ header {
         margin-top: 6px;
         transition: transform 225ms ease-in-out;
     }
-
-
-
 }
