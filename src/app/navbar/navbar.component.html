@@ -1,17 +1,16 @@
 <header>
     <img routerLink="/" class="logo" src="assets/img/logo.png" alt="">
     <div class="navbar_right_container d_flex">
-        <div *ngIf="openNavbar" class="navlinks d_flex">
+        <div [class.navlinks_open]="openNavbar" class="navlinks d_flex">
             <a routerLink="/">HOME</a>
             <a routerLink="/about">ABOUT</a>
             <a href="#">CODE</a>
             <a href="#">CHAT</a>
         </div>
 
-        <div onclick="openMenu()" class="burger">
-            <div id="line1" class="line1"></div>
-            <div id="line2" class="line2"></div>
+        <div (click)="openMenu()" class="burger">
+            <div [class.line1_clicked]="openNavbar" class="line1"></div>
+            <div [class.line2_clicked]="openNavbar" class="line2"></div>
         </div>
-
     </div>
 </header>

@@ -1,15 +1,34 @@
-.text_end_container {
-    margin-left: 2.5%;
+.footer_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    max-width: 100%;
     margin-top: 70px;
+
     margin-bottom: 70px;
+}
+
+.footer_container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 1700px;
+    width: 85%;
     a {
         text-decoration: underline;
-       color: #c5c5c5; 
+        color: #c5c5c5;
         margin-right: 20px;
         font-size: calc(25px + 20 * ((100vw - 420px) / 1180));
 
         &:hover {
             text-decoration-color: #ffc22e;
         }
+    }
+}
+
+@media (max-width: 900px) {
+    .footer_container {
+        width: 93%;
     }
 }

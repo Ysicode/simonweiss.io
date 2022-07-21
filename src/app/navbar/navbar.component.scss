@@ -1,5 +1,5 @@
 header {
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,11 +8,14 @@ header {
     top: 0;
     bottom: 0;
     height: 100px;
+    width: 100vw;
+    max-width: 100%;
 
     .logo {
         margin-left: 2.5%;
         height: 50px;
         width: 50px;
+        cursor: pointer;
     }
 
     .navbar_right_container {
@@ -21,11 +24,12 @@ header {
 
     .navlinks {
         margin-right: 10px;
-        transform: scale(0);
+        transform: scaleY(0);
+        transition: all 150ms ease;
     }
 
-    .navbar_open {
-        transform: scale(1);
+    .navlinks_open {
+        transform: scaleY(1);
     }
 
     a {
@@ -33,7 +37,7 @@ header {
         margin-left: 20px;
         margin-right: 20px;
         color: #c5c5c5;
-        font-size: 22px;
+        font-size: 25px;
         font-weight: bold;
 
         &:hover {
@@ -62,10 +66,10 @@ header {
 
         &:hover {
             .line2 {
-                animation: burgerHover 225ms ease-in-out;
+                animation: burgerHover 150ms ease;
                 background: #ffc22e;
             }
-    
+
             .line1 {
                 background: #ffc22e;
             }
@@ -80,7 +84,10 @@ header {
         transition: transform 225ms ease-in-out;
     }
 
-    
+    .line1_clicked {
+        transform: rotate(45deg);
+        background: #ffc22e;
+    }
 
     .line2 {
         display: block;
@@ -90,4 +97,11 @@ header {
         margin-top: 6px;
         transition: transform 225ms ease-in-out;
     }
+
+    .line2_clicked {
+        transform: rotate(-45deg);
+        margin-top: -3px;
+        background: #ffc22e;
+    }
 }
+
