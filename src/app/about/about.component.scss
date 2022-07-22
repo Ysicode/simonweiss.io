@@ -45,6 +45,10 @@
     margin-bottom: 0px;
 }
 
+.color {
+    color: #dadada;
+}
+
 .colored_text {
     color: #be8e68;
 }
@@ -79,18 +83,38 @@
 }
 
 .story {
-margin-left: 40px;
+    margin-left: 40px;
 }
 
 .info_text {
     font-size: calc(25px + 16 * ((100vw - 420px) / 1180));
 }
 
+.techstack_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 
+.techstack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px;
+    width: 15%;
+    .stack_text {
+        font-size: 25px;
+        color: #c5c5c5;
+    }
 
-
-
-
+    img {
+        width: 80px;
+        height: 80px;
+    }
+}
 
 @media (max-width: 900px) {
     .text_container {
