@@ -21,9 +21,6 @@ export class StartpageComponent implements OnInit {
 
   scrollEvent = (event: any): void => {
     const scroll = event.srcElement.scrollingElement.scrollTop;
-  let opa = document.getElementById('profile')?.style.opacity;
-      console.log('haöllo', opa);
-  
   }
 
   updateTextSlide() {
