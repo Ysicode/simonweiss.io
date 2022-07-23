@@ -4,8 +4,6 @@ body {
     font-family: "Archivo Narrow", sans-serif;
 }
 
-
-
 .d_flex {
     display: flex;
     align-items: center;
@@ -14,6 +12,12 @@ body {
 
 .d_none {
     display: none;
+}
+
+.d_flex_end {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 h1 {
@@ -29,8 +33,7 @@ h2 {
 }
 
 h3 {
-    color: #c5c5c5;
-    
+    color: #c5c5c5;   
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 1.5em;

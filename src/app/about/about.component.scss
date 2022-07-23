@@ -17,6 +17,8 @@
     margin-left: -20%;
 }
 
+
+
 .page_id {
     margin-bottom: 40px;
 }
@@ -41,8 +43,8 @@
     font-size: 1.5em;
     font-weight: bold;
     color: #c5c5c5;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .color {
@@ -67,8 +69,8 @@
 }
 
 .textblock_container {
-    margin-top: 70px;
-    margin-bottom: 70px;
+    margin-top: 150px;
+    margin-bottom: 100px;
 }
 
 .story_container {
@@ -95,7 +97,12 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    flex-direction: column;
+    background: #373737;
+}
+
+.techstack_row {
+    width: 100%;
 }
 
 .techstack {
@@ -114,6 +121,15 @@
         width: 80px;
         height: 80px;
     }
+}
+
+.link_projects_container {
+    width: 100%;
+    margin-top: 15px;
+}
+
+@media (max-width: 1300px) {
+
 }
 
 @media (max-width: 900px) {
