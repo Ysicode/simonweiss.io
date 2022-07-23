@@ -20,6 +20,13 @@ body {
     justify-content: flex-end;
 }
 
+.d_flex_column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 h1 {
     color: #c5c5c5;
     margin-top: 0px;
