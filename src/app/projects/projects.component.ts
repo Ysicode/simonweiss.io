@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent implements OnInit {
+export class ProjectsComponent {
+open_project = false;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+openProject() {
+  this.open_project = !this.open_project;
+}
 
 }

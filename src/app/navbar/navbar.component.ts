@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  openNavbar = false;
+  open_navbar = false;
 
   openMenu() {
-    this.openNavbar = !this.openNavbar;
+    this.open_navbar = !this.open_navbar;
   }
   
 }
