@@ -11,10 +11,18 @@ header {
     width: 100vw;
     max-width: 100%;
 
-    .logo {
-        margin-left: 2.5%;
+    .logo_wrapper {
         height: 50px;
         width: 50px;
+        margin-left: 2.5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo {
+        height: 100%;
+        width: 100%;
         cursor: pointer;
     }
 
