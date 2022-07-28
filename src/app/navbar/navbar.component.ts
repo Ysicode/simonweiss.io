@@ -11,31 +11,45 @@ export class NavbarComponent implements OnInit {
   leftInterval: any;
   rightInterval: any;
   @ViewChild('logo1', { static: true }) logo: ElementRef;
+  @ViewChild('myName', { static: true }) myName: ElementRef;
 
   ngOnInit(): void {
     this.animateLogo();
   }
 
   animateLogo() {
+    this.myName.nativeElement.innerHTML = 'imon';
+    this.myName.nativeElement.style.opacity = '0';
     this.leftInterval = setInterval(() => {
       this.rotation++
       this.logo.nativeElement.style.transform = `rotate(${this.rotation}deg)`
-      if (this.rotation > 100) {
-        this.animateLogoback();
+      if (this.rotation > 160) {
+        this.myName.nativeElement.style.opacity = '1';
+        this.myName.nativeElement.innerHTML = 'eiss';
+        setTimeout(() => {
+          this.myName.nativeElement.style.opacity = '0';
+          this.animateLogoback();
+        }, 1500);
         clearInterval(this.leftInterval);
       }
-    }, 30)
+    }, 20)
   }
 
   animateLogoback() {
+    
     this.rightInterval = setInterval(() => {
       this.rotation--
       this.logo.nativeElement.style.transform = `rotate(${this.rotation}deg)`
       if (this.rotation < 0) {
-        this.animateLogo();
+        this.myName.nativeElement.style.opacity = '1';
+        this.myName.nativeElement.innerHTML = 'imon';
+        setTimeout(() => {
+          
+          this.animateLogo();
+        }, 1500);
         clearInterval(this.rightInterval);
       }
-    }, 30)
+    }, 20)
   }
 
   openMenu() {

@@ -11,10 +11,16 @@ header {
     width: 100vw;
     max-width: 100%;
 
+    .left_navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 2.5%;
+    }
+
     .logo_wrapper {
         height: 50px;
         width: 50px;
-        margin-left: 2.5%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -24,6 +30,16 @@ header {
         height: 100%;
         width: 100%;
         cursor: pointer;
+    }
+
+    .myName_wrapper {
+        margin-left: -14px;
+    }
+
+    .my_name {
+        transition: all 400ms ease-in-out;
+        font-size: 35px;
+        color: #c5c5c5;
     }
 
     .navbar_right_container {

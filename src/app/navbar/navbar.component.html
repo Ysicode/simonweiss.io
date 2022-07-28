@@ -1,7 +1,13 @@
 <header>
-    <div class="logo_wrapper">
-        <img #logo1 routerLink="/" class="logo" src="assets/img/logo.png" alt="">
+    <div class="left_navbar">
+        <div class="logo_wrapper">
+            <img #logo1 routerLink="/" class="logo" src="assets/img/logo.png" alt="">
+        </div>
+        <div class="myName_wrapper">
+            <p #myName class="my_name"></p>
+        </div>
     </div>
+    
     <div class="navbar_right_container d_flex">
         <div [class.navlinks_open]="open_navbar" class="navlinks d_flex">
             <a routerLink="/">HOME</a>
