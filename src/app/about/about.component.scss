@@ -14,6 +14,7 @@
     object-fit: cover;
     margin-top: 200px;
     opacity: 0.7;
+    border-radius: 10px;
     margin-left: -20%;
 }
 
@@ -55,7 +56,11 @@
 }
 
 .colored_text {
-    color: #be8e68;
+    color: #b5a188;
+}
+
+.highlight_text {
+    color: #1ABC9C;
 }
 
 .link_text {
@@ -101,7 +106,8 @@
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    background: #373737;
+    border: 2px dotted #c1c0c0;
+    border-radius: 10px;
 }
 
 .techstack_row {

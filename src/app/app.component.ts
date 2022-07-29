@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { __classPrivateFieldSet } from 'tslib';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent {
 
+  addClasslist(id: string, classList: string) {
+    document.getElementById(id).classList.add(classList);
+  }
+
+  removeClasslist(id: string, classList: string) {
+    document.getElementById(id).classList.remove(classList);
+  }
 }

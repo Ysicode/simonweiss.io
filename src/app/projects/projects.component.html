@@ -1,10 +1,10 @@
 <div class="main_container">
 
     <section class="text_container projects">
-        <h1 class="projects_title">Projects</h1>
-        <div class="project_container">
+        <h1 class="projects_title highlight_text">Projects</h1>
+        <div (click)="openProject('0')" class="project_container">
             <h2 class="project_description">Game | Jump n Run</h2>
-            <div class="project_show_container">
+            <div id="0" class="project_show_container">
                 <div class="project d_flex">
                     <video [muted]="'muted'" playsinline width="100%" height="100%" autoplay constrols loop>
                         <source src="assets/img/polloLoco.mp4" type="video/mp4">
@@ -18,9 +18,9 @@
             <h2 class="project_title">El Pollo Loco</h2>
         </div>
 
-        <div class="project_container">
+        <div (click)="openProject('1')" class="project_container">
             <h2 class="project_description">RESTful API | All Pokemons</h2>
-            <div class="project_show_container">
+            <div id="1" class="project_show_container">
                 <div class="project d_flex">
                     <video [muted]="'muted'" playsinline width="100%" height="100%" autoplay constrols loop>
                         <source src="assets/img/pokedex.mp4" type="video/mp4">
@@ -34,9 +34,9 @@
             <h2 class="project_title">Pokedex</h2>
         </div>
 
-        <div class="project_container ">
+        <div (click)="openProject('2')"  class="project_container ">
             <h2 class="project_description">Project Managment tool</h2>
-            <div class="project_show_container">
+            <div id="2" class="project_show_container">
                 <div class="project d_flex">
                     <video [muted]="'muted'" playsinline width="100%" height="100%" autoplay constrols loop>
                         <source src="assets/img/join.mp4" type="video/mp4">
@@ -50,9 +50,9 @@
             <h2 class="project_title">Join</h2>
         </div>
 
-        <div class="project_container ">
+        <div  (click)="openProject('3')" class="project_container ">
             <h2 class="project_description">Game</h2>
-            <div class="project_show_container">
+            <div id="3" class="project_show_container">
                 <div class="project d_flex">
                     <img class="procets_img" src="assets/img/tictactoe.png" alt="">
                 </div>
