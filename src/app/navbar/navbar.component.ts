@@ -43,8 +43,7 @@ export class NavbarComponent implements OnInit {
       if (this.rotation < 0) {
         this.myName.nativeElement.style.opacity = '1';
         this.myName.nativeElement.innerHTML = 'imon';
-        setTimeout(() => {
-          
+        setTimeout(() => {  
           this.animateLogo();
         }, 1500);
         clearInterval(this.rightInterval);
