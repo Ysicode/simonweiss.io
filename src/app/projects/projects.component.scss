@@ -27,6 +27,11 @@
 .open_project {
     opacity: 1 !important;
     max-height: 800px !important;
+
+    .project_link {
+        opacity: 1 !important;
+        max-height: 800px !important;
+    }
 }
 
 .project_description {
@@ -53,6 +58,9 @@
 .project_link {
     width: 35%;
     height: 100%;
+    transition: max-height 0.8s, opacity 0.5s ease-in-out;
+    opacity: 0;
+    max-height: 0px;
 
     &:hover {
         .open_project_link_ {
@@ -143,10 +151,9 @@
     margin-bottom: 100px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .text_container {
         width: 93%;
-        margin-top: 130px;
     }
 
     .project_container {

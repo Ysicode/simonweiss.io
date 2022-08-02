@@ -10,6 +10,7 @@ header {
     height: 100px;
     width: 100vw;
     max-width: 100%;
+    z-index: 999;
 
     .left_navbar {
         display: flex;
@@ -48,26 +49,39 @@ header {
 
     .navlinks {
         margin-right: 10px;
-        transform: scaleY(0);
+        transform: scaleX(0);
         transition: all 150ms ease;
     }
 
     .navlinks_open {
-        transform: scaleY(1);
+        transform: scaleX(1);
     }
 
     a {
         text-decoration: none;
+        position: relative;
         margin-left: 20px;
         margin-right: 20px;
         color: #c5c5c5;
         font-size: 25px;
         font-weight: bold;
+    }
 
-        &:hover {
-            text-decoration: underline;
-            text-decoration-color: #ffc22e;
-        }
+    a::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        left: 0;
+        bottom: -3px;
+        height: 3px;
+        background-color: #ffc22e;
+        transform: scaleX(0);
+        transition: transform 150ms ease-out;
+    }
+
+    a:hover::before {
+        transform: scaleX(1);
     }
 
     .burger {
@@ -128,4 +142,3 @@ header {
         background: #ffc22e;
     }
 }
-

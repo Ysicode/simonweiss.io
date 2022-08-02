@@ -18,10 +18,59 @@
     font-size: calc(23px + 16 * ((100vw - 420px) / 1180));
 }
 
+.start_text {
+    font-family: "Archivo Narrow", sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #c5c5c5;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    a {
+        text-decoration: none;
+        color: #c5c5c5;
+
+        &:hover {
+            cursor: pointer;
+            transition: all 150ms ease-in-out;
+            color: #ffc22e;
+        }
+    }
+}
+
+.project_title {
+    font-size: 2.5em !important;
+}
+
+.colored_text {
+    color: #b5a188;
+}
+ 
 .chat {
     margin-top: 200px;
 }
 
 .highlight_text {
     color: #1ABC9C;
+}
+
+.textblock_container {
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+@media (max-width: 1000px) {
+    .text_container {
+        width: 93%;
+    }
+
+    .project_container {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .textblock_container {
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
 }
