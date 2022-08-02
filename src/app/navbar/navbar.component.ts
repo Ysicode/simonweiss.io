@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -10,11 +10,37 @@ export class NavbarComponent implements OnInit {
   rotation = 0;
   leftInterval: any;
   rightInterval: any;
+  screenWidth: any;
+  screenHeight: any;
+  mobileModus = false;
   @ViewChild('logo1', { static: true }) logo: ElementRef;
   @ViewChild('myName', { static: true }) myName: ElementRef;
 
   ngOnInit(): void {
     this.animateLogo();
+    this.checkScreenWidth();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.screenWidth = window.innerWidth;
+    this.screenHeight = window.innerHeight;
+    if (this.screenWidth < 1000) {
+      this.mobileModus = true;
+    } else {
+      this.mobileModus = false;
+    }
+  }
+
+  checkScreenWidth() {
+    this.screenWidth = window.innerWidth;
+    this.screenHeight = window.innerHeight;
+    if (this.screenWidth < 1000) {
+      this.mobileModus = true;
+    } else {
+      this.mobileModus = false;
+    }
+    console.log(this.screenWidth);
   }
 
   animateLogo() {

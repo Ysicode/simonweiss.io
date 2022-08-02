@@ -41,6 +41,7 @@ header {
         transition: all 400ms ease-in-out;
         font-size: 35px;
         color: #c5c5c5;
+        font-weight: bold;
     }
 
     .navbar_right_container {
@@ -84,9 +85,38 @@ header {
         transform: scaleX(1);
     }
 
+    .sidemenu {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        flex-direction: column;
+        position: absolute;
+        height: 100vh;
+        padding-top: 150px;
+        width: 50%;
+        right: 0;
+        top: 0;
+        background: #0e2025;
+        border-left: 1px solid #c5c5c5;
+        a {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 50px;
+        }
+    }
+
+    .copyright {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        flex-direction: column;
+        border-top: 2px solid white;
+    }
+
     .burger {
         width: 80px;
         height: 80px;
+        z-index: 9999;
         align-items: center;
         justify-content: center;
         display: flex;
