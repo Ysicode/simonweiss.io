@@ -98,11 +98,17 @@ header {
         top: 0;
         background: #0e2025;
         border-left: 1px solid #c5c5c5;
+        transform: translateX(700px);
+        transition: all 200ms ease-in-out;
         a {
             margin-top: 10px;
             margin-bottom: 10px;
             margin-right: 50px;
         }
+    }
+
+    .sidemenu_open {
+        transform: translateX(0px);
     }
 
     .copyright {

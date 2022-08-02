@@ -15,17 +15,22 @@
             <a routerLink="/projects">PROJECTS</a>
             <a routerLink="/chat">CHAT</a>
         </div>
-        <div *ngIf="mobileModus" class="sidemenu ">
-            <a routerLink="/">HOME</a>
-            <a routerLink="/about">THAT'S ME</a>
-            <a routerLink="/projects">PROJECTS</a>
-            <a routerLink="/chat">CHAT</a>
-            <div class="copyright">
-                <a routerLink="/projects">IMPRINT</a>
-                <a routerLink="/chat">PRIVACY</a>
-            </div>
+        <div>
+            <div *ngIf="mobileModus" [class.sidemenu_open]="open_navbar" class="sidemenu ">
+                <a routerLink="/">HOME</a>
+                <a routerLink="/about">THAT'S ME</a>
+                <a routerLink="/projects">PROJECTS</a>
+                <a routerLink="/chat">CHAT</a>
+                <div class="copyright">
+                    <a routerLink="/projects">IMPRINT</a>
+                    <a routerLink="/chat">PRIVACY</a>
+                </div>
+                <p>Simon Weiss</p>
+                <p>© Copyright 2022</p>
 
+            </div>
         </div>
+
 
         <div (click)="openMenu()" class="burger">
             <div [class.line1_clicked]="open_navbar" class="line1"></div>
