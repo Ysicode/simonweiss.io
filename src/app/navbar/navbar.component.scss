@@ -18,6 +18,8 @@ header {
 
     .logo_wrapper {
         height: 50px;
+        width: 50px;
+        object-fit: contain;
     }
 
     .logo {
@@ -71,7 +73,7 @@ header {
         height: 3px;
         background-color: #ffc22e;
         transform: scaleX(0);
-        transition: transform 150ms ease-out;
+        transition: transform 100ms ease-out;
     }
 
     a:hover::before {
@@ -187,6 +189,10 @@ header {
         margin-top: -3px;
         background: #ffc22e;
     }
+}
+
+.header_open {   
+    background: #0a1a1f;
 }
 
 @media (max-width: 800px) {

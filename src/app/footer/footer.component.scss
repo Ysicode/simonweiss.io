@@ -5,9 +5,6 @@
 }
 
 .footer_section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100vw;
     max-width: 100%;
     margin-top: 70px;
@@ -49,6 +46,31 @@
 
     a:hover::before {
         transform: scaleX(1);
+    }
+}
+
+.copyright_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1700px;
+    width: 85%;
+    margin-top: 20px;
+
+    a {
+        text-decoration: none;
+        color: #c5c5c5;
+        margin-left: 10px;
+    }
+
+    .copyright {
+
+        p {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            color: #c5c5c5;
+            margin-right: 10px;
+        }
     }
 }
 
