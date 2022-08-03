@@ -9,6 +9,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ChatComponent } from './chat/chat.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { ImprintComponent } from './imprint/imprint.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { ChatComponent } from './chat/chat.component';
     NavbarComponent,
     AboutComponent,
     ProjectsComponent,
-    ChatComponent
+    ChatComponent,
+    PrivacyComponent,
+    ImprintComponent
   ],
   imports: [
     BrowserModule,

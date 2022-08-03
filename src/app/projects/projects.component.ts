@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { AppComponent } from '../app.component';
 
 @Component({
@@ -9,7 +9,7 @@ import { AppComponent } from '../app.component';
 export class ProjectsComponent extends AppComponent {
   open_project = '';
 
-  openProject(id: any) {
+  openProject(id: any) { 
     this.checkClasslist();
     this.addClasslist(id,'open_project');
   }
@@ -22,4 +22,6 @@ export class ProjectsComponent extends AppComponent {
       }
     }); 
   }
+
+
 }

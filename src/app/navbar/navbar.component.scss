@@ -188,3 +188,16 @@ header {
         background: #ffc22e;
     }
 }
+
+@media (max-width: 800px) {
+        .sidemenu {
+            width: 60% !important;
+        } 
+}
+
+
+@media (max-width: 500px) {
+    .sidemenu {
+        width: 100% !important;
+    } 
+}
