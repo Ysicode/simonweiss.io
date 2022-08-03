@@ -84,6 +84,7 @@ export class NavbarComponent implements OnInit {
     }, 20)
   }
 
+
   openMenu() {
     this.open_navbar = !this.open_navbar;
   }
