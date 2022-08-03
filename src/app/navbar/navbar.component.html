@@ -1,4 +1,4 @@
-<header [class.header_open]="open_navbar">
+<header [class.header_open]="open_navbar && !mobileModus">
     <div class="left_navbar d_flex">
         <div class="logo_wrapper d_flex">
             <img #logo1 routerLink="/" class="logo" src="assets/img/logo.png" alt="">
@@ -35,7 +35,7 @@
 
             </div>
         </div>
-
+ 
 
         <div (click)="openMenu()" class="burger">
             <div [class.line1_clicked]="open_navbar" class="line1"></div>

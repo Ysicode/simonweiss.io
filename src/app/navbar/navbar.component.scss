@@ -207,3 +207,9 @@ header {
         width: 100% !important;
     } 
 }
+
+@media (max-height: 800px) {
+    .sidebar_container_top {
+        padding-top: 100px !important;
+    }
+}
