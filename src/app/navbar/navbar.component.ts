@@ -40,20 +40,16 @@ export class NavbarComponent implements OnInit {
     } else {
       this.mobileModus = false;
     }
-    console.log(this.screenWidth);
   }
 
   animateLogo() {
-    this.myName.nativeElement.innerHTML = 'imon';
-    this.myName.nativeElement.style.opacity = '0';
+    this.animateName('imon', '0');
     this.leftInterval = setInterval(() => {
-      this.rotation++
-      this.logo.nativeElement.style.transform = `rotate(${this.rotation}deg)`
+      this.startRotation('down');
       if (this.rotation > 160) {
-        this.myName.nativeElement.style.opacity = '1';
-        this.myName.nativeElement.innerHTML = 'eiss';
+        this.animateName('eiss', '1');
         setTimeout(() => {
-          this.myName.nativeElement.style.opacity = '0';
+          this.animateName('eiss', '0');
           this.animateLogoback();
         }, 1500);
         clearInterval(this.leftInterval);
@@ -61,14 +57,25 @@ export class NavbarComponent implements OnInit {
     }, 20)
   }
 
-  animateLogoback() {
-    
-    this.rightInterval = setInterval(() => {
+  startRotation(direction: string) {
+    if (direction == 'down') {
+      this.rotation++ 
+    } else {
       this.rotation--
-      this.logo.nativeElement.style.transform = `rotate(${this.rotation}deg)`
+    }
+    this.logo.nativeElement.style.transform = `rotate(${this.rotation}deg)`
+  }
+
+  animateName(content: string, opacity: string) {
+    this.myName.nativeElement.innerHTML = content;
+    this.myName.nativeElement.style.opacity = opacity;
+  }
+
+  animateLogoback() {   
+    this.rightInterval = setInterval(() => {
+      this.startRotation('up');   
       if (this.rotation < 0) {
-        this.myName.nativeElement.style.opacity = '1';
-        this.myName.nativeElement.innerHTML = 'imon';
+        this.animateName('imon', '1');
         setTimeout(() => {  
           this.animateLogo();
         }, 1500);
@@ -79,6 +86,10 @@ export class NavbarComponent implements OnInit {
 
   openMenu() {
     this.open_navbar = !this.open_navbar;
+  }
+
+  closeMenu() {
+    this.open_navbar = false;
   }
 
 }

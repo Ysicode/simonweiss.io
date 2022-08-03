@@ -13,18 +13,11 @@ header {
     z-index: 999;
 
     .left_navbar {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         margin-left: 2.5%;
     }
 
     .logo_wrapper {
         height: 50px;
-        width: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     .logo {
@@ -88,16 +81,14 @@ header {
     .sidemenu {
         display: flex;
         align-items: flex-end;
-        justify-content: flex-start;
+        justify-content: space-between;
         flex-direction: column;
         position: absolute;
         height: 100vh;
-        padding-top: 150px;
-        width: 50%;
+        width: 40%;
         right: 0;
         top: 0;
-        background: #0e2025;
-        border-left: 1px solid #c5c5c5;
+        background: #0a1a1f;
         transform: translateX(700px);
         transition: all 200ms ease-in-out;
         a {
@@ -111,12 +102,31 @@ header {
         transform: translateX(0px);
     }
 
-    .copyright {
+    .sidebar_container_top {
         display: flex;
         align-items: flex-end;
         justify-content: flex-start;
         flex-direction: column;
-        border-top: 2px solid white;
+        padding-top: 150px;
+    }
+
+    .sidebar_container_bottom {
+        padding-bottom: 50px;
+
+        .copyright {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            flex-direction: column;
+            margin-top: 30px;
+
+            p {
+                margin-top: 0px;
+                margin-bottom: 0px;
+                color: #c5c5c5;
+                margin-right: 50px;
+            }
+        }
     }
 
     .burger {
