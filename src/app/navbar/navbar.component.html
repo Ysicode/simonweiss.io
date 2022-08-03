@@ -24,9 +24,12 @@
                     <a routerLink="/chat" (click)="closeMenu()">CHAT</a>
                 </div>
                 
-                <div class="sidebar_container_bottom d_flex_column">
-                    <a routerLink="/imprint" (click)="closeMenu()">IMPRINT</a>
-                    <a routerLink="/privacy" (click)="closeMenu()">PRIVACY</a>
+                <div class="sidebar_container_bottom">
+                    <div class="imprint">
+                        <a routerLink="/imprint" (click)="closeMenu()">Imprint</a>
+                        <a routerLink="/privacy" (click)="closeMenu()">Privacy</a>
+                    </div>
+                
                     <div class="copyright">
                         <p>copyright</p>
                         <p>Simon Weiss 2022</p>
