@@ -221,6 +221,15 @@ header {
     .sidemenu {
         width: 100% !important;
     }
+
+    .logo {
+        width: 85% !important;
+        height: 85% !important;
+    }
+
+    .my_name {
+        font-size: 30px !important;
+    }
 }
 
 @media (max-height: 800px) {
@@ -229,7 +238,7 @@ header {
     }
 }
 
-@media (max-height: 600px) {
+@media (max-height: 550px) {
     .sidebar_container_top {
         padding-top: 80px !important;
     }
