@@ -11,16 +11,16 @@
     <div class="navbar_right_container d_flex">
         <div *ngIf="!mobileModus" [class.navlinks_open]="open_navbar" class="navlinks d_flex">
             <a routerLink="/" (click)="closeMenu()">HOME</a>
-            <a routerLink="/about" (click)="closeMenu()">THAT'S ME</a>
             <a routerLink="/projects" (click)="closeMenu()">PROJECTS</a>
+            <a routerLink="/about" (click)="closeMenu()">THAT'S ME</a>
             <a routerLink="/chat" (click)="closeMenu()">CHAT</a>
         </div>
         <div>
             <div *ngIf="mobileModus" [class.sidemenu_open]="open_navbar" class="sidemenu ">
                 <div class="sidebar_container_top">
                     <a routerLink="/" (click)="closeMenu()">HOME</a>
-                    <a routerLink="/about" (click)="closeMenu()">THAT'S ME</a>
                     <a routerLink="/projects" (click)="closeMenu()">PROJECTS</a>
+                    <a routerLink="/about" (click)="closeMenu()">THAT'S ME</a>
                     <a routerLink="/chat" (click)="closeMenu()">CHAT</a>
                 </div>
                 

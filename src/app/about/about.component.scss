@@ -22,6 +22,17 @@
     margin-bottom: 40px;
 }
 
+.cv_link {
+    text-decoration: none !important;
+    color: #c5c5c5;
+    font-size: 0.5em;
+    margin-left: 60px;
+
+    &:hover {
+        color: #ffc22e;
+    }
+}
+
 .section_title {
     margin-top: 100px;
     margin-bottom: 40px;
@@ -34,7 +45,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    font-size: calc(23px + 16 * ((100vw - 420px) / 1180));
+    font-size: calc(23px + 16 * ((100vw - 420px) / 1700));
 }
 
 .start_text {
@@ -97,7 +108,7 @@
 }
 
 .info_text {
-    font-size: calc(23px + 16 * ((100vw - 420px) / 1180));
+    font-size: calc(23px + 16 * ((100vw - 420px) / 1700));
 }
 
 .techstack_container {
