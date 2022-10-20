@@ -19,9 +19,25 @@
         </div>
 
         <div class="project_container">
-            <h2 class="project_description">Firebase | Angular project </h2>
+            <h2 class="project_description">Algorythms | Angular project</h2>
             <div id="1" class="project_show_container">
                 <div (click)="openProject('1')" class="project d_flex">
+                    <video [muted]="'muted'" playsinline width="100%" height="100%" autoplay constrols loop>
+                        <source src="assets/img/visualizer.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="project_link d_flex">
+                    <a target="_blank" rel="noopener noreferrer" href="https://visualizer.simon-weiss.com/"><h2 class="open_project_link_">Open</h2></a>
+                </div>
+            </div> 
+            <h2  class="project_title">Array Visualizer</h2>
+        </div>
+
+        <div class="project_container">
+            <h2 class="project_description">Firebase | Angular project </h2>
+            <div id="2" class="project_show_container">
+                <div (click)="openProject('2')" class="project d_flex">
                     <video [muted]="'muted'" playsinline width="100%" height="100%" autoplay constrols loop>
                         <source src="assets/img/ringoffire.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -36,8 +52,8 @@
 
         <div class="project_container">
             <h2 class="project_description">RESTful API | All Pokemons</h2>
-            <div id="2" class="project_show_container">
-                <div (click)="openProject('2')"  class="project d_flex">
+            <div id="3" class="project_show_container">
+                <div (click)="openProject('3')"  class="project d_flex">
                     <video [muted]="'muted'" playsinline width="100%" height="100%" autoplay constrols loop>
                         <source src="assets/img/pokedex.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -52,8 +68,8 @@
 
         <div  class="project_container ">
             <h2 class="project_description">Project Managment tool</h2>
-            <div id="3" class="project_show_container">
-                <div (click)="openProject('3')" class="project d_flex">
+            <div id="4" class="project_show_container">
+                <div (click)="openProject('4')" class="project d_flex">
                     <video [muted]="'muted'" playsinline width="100%" height="100%" autoplay constrols loop>
                         <source src="assets/img/join.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -65,22 +81,6 @@
             </div> 
             <h2 class="project_title">Join</h2>
         </div>
-
-        <div class="project_container ">
-            <h2 class="project_description">Game</h2>
-            <div id="4" class="project_show_container">
-                <div (click)="openProject('4')" class="project d_flex">
-                    <img class="procets_img" src="assets/img/tictactoe.png" alt="">
-                </div>
-                <div class="project_link d_flex">
-                    <a target="_blank" rel="noopener noreferrer" href="https://simon-weiss.com/tic-tac-toe/"><h2 class="open_project_link_">Play</h2></a>
-                </div>
-            </div> 
-            <h2 class="project_title">Tic Tac Toe</h2>
-        </div>
-
-
-
 
 
         <div class="textblock_container">
