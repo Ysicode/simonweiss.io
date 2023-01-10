@@ -6,6 +6,7 @@ import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  year = new Date().getFullYear();
   open_navbar = false;
   rotation = 0;
   leftInterval: any;

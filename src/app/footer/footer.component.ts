@@ -7,7 +7,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent extends NavbarComponent implements OnInit {
-
+  currentYear: number = new Date().getFullYear();
   constructor() {
     super();
   }
