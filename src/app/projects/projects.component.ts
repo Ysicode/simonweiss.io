@@ -15,7 +15,7 @@ export class ProjectsComponent extends AppComponent {
   }
 
   checkClasslist() {
-    let project = Array.from(document.getElementsByClassName('project_show_container'));
+    let project = document.querySelectorAll('project_show_container');
     project.forEach((element) => {
       if (element.classList.contains('open_project')) {
         element.classList.remove('open_project');
