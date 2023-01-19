@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-startpage',
@@ -19,8 +19,6 @@ export class StartpageComponent implements OnInit {
     window.addEventListener('scroll', this.scrollEvent, true);
   }
 
-  
-
   scrollEvent = (event: any): void => {
     const scroll = event.srcElement.scrollingElement.scrollTop;
   }
@@ -35,8 +33,7 @@ export class StartpageComponent implements OnInit {
   updateDay() {
     this.today = this.weekday[this.day.getDay()];
   }
-
   
-
+  
 
 }
