@@ -54,6 +54,7 @@
     color: #ffc22e;
 }
 
+
 .focused_text {
     cursor: pointer;
     transition: all 150ms ease-in-out;
@@ -120,7 +121,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid #c5c5c5;
+    border: 2px dotted #c5c5c5;
   }
 
 
