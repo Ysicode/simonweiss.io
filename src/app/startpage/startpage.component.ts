@@ -63,7 +63,12 @@ export class StartpageComponent implements OnInit, AfterViewInit {
 
         const img = new Image();
 
-        img.src = 'assets/img/simon_weiss.jpg';
+        if (window.innerWidth > 500) {
+            img.src = 'assets/img/simon_weiss.jpg';
+        } else {
+            img.src = 'assets/img/simon_weiss_mobil.jpg';
+        }
+
 
         img.addEventListener('load', () => {
             canvas.width = img.width;
@@ -114,8 +119,8 @@ export class StartpageComponent implements OnInit, AfterViewInit {
             this.ctx.fillStyle = particle.color;
             this.ctx.fillRect(x, y, particleSize, particleSize);
         });
-      
-        console.log( 'drawing',  this.animationFrameId);
+
+        console.log('drawing', this.animationFrameId);
         if (this.doAnimation) {
             this.animationFrameId = requestAnimationFrame(() => this.drawParticles());
         }
@@ -125,7 +130,7 @@ export class StartpageComponent implements OnInit, AfterViewInit {
         }
     }
 
-    
+
 
     addEventListeners() {
         const canvas: HTMLCanvasElement = this.canvasEl.nativeElement;
@@ -142,18 +147,17 @@ export class StartpageComponent implements OnInit, AfterViewInit {
 
         canvas.addEventListener('touchmove', (event) => {
             event.preventDefault();
-          
-            // Get the touch position relative to the canvas
+
             const touch = event.touches[0];
             this.mouseX = touch.clientX - canvas.offsetLeft;
             this.mouseY = touch.clientY - canvas.offsetTop;
-          
+
             this.doAnimation = true;
-          
+
             if (this.animationFrameId < 2) {
-              this.animationFrameId = requestAnimationFrame(() => this.drawParticles());
+                this.animationFrameId = requestAnimationFrame(() => this.drawParticles());
             }
-          });
+        });
 
         canvas.addEventListener('mouseleave', () => {
 
@@ -164,11 +168,27 @@ export class StartpageComponent implements OnInit, AfterViewInit {
                 this.doAnimation = false
             }, 2000);
         });
+
+        canvas.addEventListener('touchend', () => {
+            this.mouseX = Infinity;
+            this.mouseY = Infinity;
+
+            // Set a timeout to disable the animation after 2000ms (2 seconds)
+            setTimeout(() => {
+                this.doAnimation = false;
+            }, 2000);
+        });
     }
 
 
     updateParticles() {
-        const REPEL_RADIUS = 100;
+        let REPEL_RADIUS = 0;
+        if (window.innerWidth > 500) {
+            REPEL_RADIUS = 100;
+        } else {
+            REPEL_RADIUS = 40;
+        }
+
         const REPEL_SPEED = 6;
         const RETURN_SPEED = 0.2;
 
