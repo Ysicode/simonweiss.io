@@ -98,7 +98,10 @@
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
   }
-  
+  .flip-card-front {
+    border: 2px solid #c5c5c5;
+  }
+
   .flip-card-back {
     background-color: #091417;
     color: #c5c5c5;
