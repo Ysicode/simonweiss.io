@@ -120,7 +120,6 @@ export class StartpageComponent implements OnInit, AfterViewInit {
             this.ctx.fillRect(x, y, particleSize, particleSize);
         });
 
-        console.log('drawing', this.animationFrameId);
         if (this.doAnimation) {
             this.animationFrameId = requestAnimationFrame(() => this.drawParticles());
         }
